@@ -1,0 +1,7 @@
+{
+  "lumoImports": ["color", "typography", "sizing", "spacing", "style"],
+  "documentCssImport": {
+    "include": ["lumo-color-properties", "lumo-typography-properties"]
+  }
+
+}

@@ -1,0 +1,183 @@
+/* Global component styles */
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-medium);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-md);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.card-header {
+  border-bottom: 2px solid var(--lumo-primary-color);
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.card-subtitle {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-top: var(--spacing-xs);
+}
+
+/* Status badges */
+.status-badge {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.status-online {
+  background: var(--secondary-gradient);
+  color: white;
+}
+
+.status-offline {
+  background: var(--danger-gradient);
+  color: white;
+}
+
+.status-lost {
+  background: var(--warning-gradient);
+  color: white;
+}
+
+/* Dashboard styles */
+.dashboard-card {
+  background: white;
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-medium);
+  padding: var(--spacing-lg);
+  text-align: center;
+  transition: all 0.2s ease;
+  border-left: 4px solid var(--lumo-primary-color);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.dashboard-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.dashboard-label {
+  font-size: 0.875rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: var(--spacing-xs);
+}
+
+/* Form styles */
+.login-form,
+.registration-form {
+  background: white;
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-heavy);
+  padding: var(--spacing-xl);
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.form-title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Map specific styles */
+.map-view {
+  background: var(--primary-gradient);
+  min-height: 100vh;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+/* Loading spinner */
+.loading-spinner {
+  border: 3px solid rgba(102, 126, 234, 0.1);
+  border-top: 3px solid var(--lumo-primary-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin: var(--spacing-sm);
+    padding: var(--spacing-md);
+  }
+  
+  .login-form,
+  .registration-form {
+    margin: var(--spacing-md);
+    padding: var(--spacing-md);
+  }
+  
+  .dashboard-number {
+    font-size: 2rem;
+  }
+}

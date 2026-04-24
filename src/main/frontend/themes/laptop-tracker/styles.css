@@ -1,0 +1,116 @@
+@import url('./components/global.css');
+
+/* Main theme styles for Laptop Tracker */
+html {
+  --lumo-primary-color: #667eea;
+  --lumo-primary-color-50pct: rgba(102, 126, 234, 0.5);
+  --lumo-primary-color-10pct: rgba(102, 126, 234, 0.1);
+  --lumo-primary-text-color: #667eea;
+  --lumo-primary-contrast-color: white;
+  --lumo-error-color: #f44336;
+  --lumo-success-color: #4CAF50;
+  --lumo-warning-color: #FF9800;
+  
+  /* Custom gradients */
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(45deg, #4CAF50, #45a049);
+  --danger-gradient: linear-gradient(45deg, #f44336, #d32f2f);
+  --warning-gradient: linear-gradient(45deg, #FF9800, #F57C00);
+  --info-gradient: linear-gradient(45deg, #2196F3, #1976D2);
+  
+  /* Shadows */
+  --shadow-light: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-medium: 0 4px 8px rgba(0,0,0,0.15);
+  --shadow-heavy: 0 8px 32px rgba(0,0,0,0.3);
+  
+  /* Border radius */
+  --border-radius: 8px;
+  --border-radius-large: 12px;
+  --border-radius-small: 4px;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+/* Enhanced button styles */
+vaadin-button[theme~="primary"] {
+  background: var(--primary-gradient);
+  border: none;
+  box-shadow: var(--shadow-light);
+  transition: all 0.2s ease;
+  border-radius: var(--border-radius);
+}
+
+vaadin-button[theme~="primary"]:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+vaadin-button[theme~="success"] {
+  background: var(--secondary-gradient);
+  border: none;
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+vaadin-button[theme~="error"] {
+  background: var(--danger-gradient);
+  border: none;
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+/* Grid enhancements */
+vaadin-grid {
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-medium);
+  overflow: hidden;
+  background: white;
+}
+
+/* Form field enhancements */
+vaadin-text-field,
+vaadin-password-field,
+vaadin-email-field,
+vaadin-select,
+vaadin-combo-box {
+  --lumo-border-radius: var(--border-radius);
+}
+
+vaadin-text-field:focus-within,
+vaadin-password-field:focus-within,
+vaadin-email-field:focus-within,
+vaadin-select:focus-within,
+vaadin-combo-box:focus-within {
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* App layout enhancements */
+vaadin-app-layout vaadin-drawer-toggle {
+  color: white;
+}
+
+vaadin-app-layout [slot="navbar"] {
+  background: var(--primary-gradient);
+  box-shadow: var(--shadow-light);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  :root {
+    --spacing-md: 0.75rem;
+    --spacing-lg: 1rem;
+    --spacing-xl: 1.25rem;
+  }
+}

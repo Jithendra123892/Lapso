@@ -1,0 +1,96 @@
+# LAPSO Project - Git Ignore File
+
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Spring Boot
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+startup.log
+startup_test.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Node modules (if any)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vaadin
+node_modules/
+frontend/generated/
+pnpmfile.js
+vite.generated.ts
+
+# Application specific
+*.bat
+!install-lapso-complete.bat
+!start-lapso-complete.bat
+!check-lapso-health.bat
+
+# Temporary files
+*.tmp
+*.temp
+
+# User specific files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# System files outside project
+../AppData/
+../Documents/
+../Downloads/
+../.aws/
+../.cache/
+../.config/
+../.docker/
+../.gradle/
+../.m2/
+../.ssh/
+../.vscode/
+../OneDrive/
+../Dropbox/

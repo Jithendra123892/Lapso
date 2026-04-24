@@ -1,0 +1,290 @@
+/* Global Styles for Laptop Tracker Application */
+
+/* Root Variables */
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(45deg, #4CAF50, #45a049);
+    --danger-gradient: linear-gradient(45deg, #f44336, #d32f2f);
+    --warning-gradient: linear-gradient(45deg, #FF9800, #F57C00);
+    --info-gradient: linear-gradient(45deg, #2196F3, #1976D2);
+    
+    --shadow-light: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-medium: 0 4px 8px rgba(0,0,0,0.15);
+    --shadow-heavy: 0 8px 32px rgba(0,0,0,0.3);
+    
+    --border-radius: 8px;
+    --border-radius-large: 12px;
+    --border-radius-small: 4px;
+    
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+}
+
+/* Body and HTML */
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* Vaadin Components Enhancement */
+vaadin-app-layout {
+    --lumo-primary-color: #667eea;
+    --lumo-primary-color-50pct: rgba(102, 126, 234, 0.5);
+    --lumo-primary-color-10pct: rgba(102, 126, 234, 0.1);
+    --lumo-primary-text-color: #667eea;
+    --lumo-header-text-color: white;
+    --lumo-base-color: #fafafa;
+}
+
+/* Button Enhancements */
+vaadin-button[theme~="primary"] {
+    background: var(--primary-gradient) !important;
+    border: none !important;
+    box-shadow: var(--shadow-light) !important;
+    transition: all 0.2s ease !important;
+}
+
+vaadin-button[theme~="primary"]:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: var(--shadow-medium) !important;
+}
+
+vaadin-button[theme~="success"] {
+    background: var(--secondary-gradient) !important;
+    border: none !important;
+    color: white !important;
+}
+
+vaadin-button[theme~="error"] {
+    background: var(--danger-gradient) !important;
+    border: none !important;
+    color: white !important;
+}
+
+/* Grid Enhancements */
+vaadin-grid {
+    border-radius: var(--border-radius-large) !important;
+    box-shadow: var(--shadow-medium) !important;
+    overflow: hidden !important;
+    background: white !important;
+}
+
+vaadin-grid-cell-content {
+    padding: var(--spacing-md) !important;
+}
+
+/* Form Field Enhancements */
+vaadin-text-field,
+vaadin-password-field,
+vaadin-email-field,
+vaadin-select,
+vaadin-combo-box {
+    --lumo-border-radius: var(--border-radius) !important;
+    --lumo-contrast-10pct: rgba(102, 126, 234, 0.1) !important;
+}
+
+vaadin-text-field:focus-within,
+vaadin-password-field:focus-within,
+vaadin-email-field:focus-within,
+vaadin-select:focus-within,
+vaadin-combo-box:focus-within {
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2) !important;
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-medium);
+    padding: var(--spacing-xl);
+    margin: var(--spacing-md);
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.card-header {
+    border-bottom: 2px solid #667eea;
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.card-subtitle {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: var(--spacing-xs);
+}
+
+/* Status Badges */
+.status-badge {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-online {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+}
+
+.status-offline {
+    background: linear-gradient(45deg, #f44336, #d32f2f);
+    color: white;
+}
+
+.status-lost {
+    background: linear-gradient(45deg, #FF9800, #F57C00);
+    color: white;
+}
+
+/* Map Specific Styles */
+.map-view {
+    background: var(--primary-gradient);
+    min-height: 100vh;
+}
+
+#map-container {
+    border-radius: var(--border-radius-large) !important;
+    box-shadow: var(--shadow-heavy) !important;
+    overflow: hidden !important;
+    margin: var(--spacing-md) var(--spacing-xl) var(--spacing-xl) var(--spacing-xl) !important;
+    background: white !important;
+}
+
+/* Leaflet Popup Enhancements */
+.leaflet-popup-content-wrapper {
+    border-radius: var(--border-radius-large) !important;
+    box-shadow: var(--shadow-heavy) !important;
+}
+
+.leaflet-popup-content {
+    margin: 0 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* Login/Registration Form Styles */
+.login-form,
+.registration-form {
+    background: white;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-heavy);
+    padding: var(--spacing-xl);
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.form-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Dashboard Styles */
+.dashboard-card {
+    background: white;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-medium);
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: all 0.2s ease;
+    border-left: 4px solid #667eea;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.dashboard-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+.dashboard-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: var(--spacing-xs);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        margin: var(--spacing-sm);
+        padding: var(--spacing-md);
+    }
+    
+    #map-container {
+        margin: var(--spacing-sm) !important;
+    }
+    
+    .login-form,
+    .registration-form {
+        margin: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    border: 3px solid rgba(102, 126, 234, 0.1);
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

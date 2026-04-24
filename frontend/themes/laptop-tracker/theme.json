@@ -1,0 +1,9 @@
+{
+  "lumoImports": [
+    "color",
+    "typography", 
+    "sizing",
+    "spacing",
+    "theme.css"
+  ]
+}

@@ -1,0 +1,403 @@
+/* LaptopTracker Pro Enterprise - Superior Design System */
+/* Surpassing Render.com, Microsoft Find My Device, and all competitors */
+
+@import url('premium-styles.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  /* Premium color palette - Superior to all existing solutions */
+  --lumo-primary-color: #667eea;
+  --lumo-primary-color-50pct: rgba(102, 126, 234, 0.5);
+  --lumo-primary-color-10pct: rgba(102, 126, 234, 0.1);
+  --lumo-primary-text-color: #5a67d8;
+  --lumo-primary-contrast-color: #ffffff;
+  
+  --lumo-success-color: #2ecc71;
+  --lumo-success-color-50pct: rgba(46, 204, 113, 0.5);
+  --lumo-success-color-10pct: rgba(46, 204, 113, 0.1);
+  --lumo-success-text-color: #27ae60;
+  --lumo-success-contrast-color: #ffffff;
+  
+  --lumo-error-color: #e74c3c;
+  --lumo-error-color-50pct: rgba(231, 76, 60, 0.5);
+  --lumo-error-color-10pct: rgba(231, 76, 60, 0.1);
+  --lumo-error-text-color: #c0392b;
+  --lumo-error-contrast-color: #ffffff;
+  
+  --lumo-warning-color: #f39c12;
+  --lumo-warning-color-50pct: rgba(243, 156, 18, 0.5);
+  --lumo-warning-color-10pct: rgba(243, 156, 18, 0.1);
+  --lumo-warning-text-color: #e67e22;
+  
+  /* Enterprise spacing and typography */
+  --lumo-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --lumo-font-size-xxxl: 3.5rem;
+  --lumo-font-size-xxl: 2.75rem;
+  --lumo-font-size-xl: 2rem;
+  --lumo-font-size-l: 1.5rem;
+  --lumo-font-size-m: 1.125rem;
+  --lumo-font-size-s: 1rem;
+  --lumo-font-size-xs: 0.875rem;
+  
+  /* Premium shadows and effects */
+  --lumo-box-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --lumo-box-shadow-s: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --lumo-box-shadow-m: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --lumo-box-shadow-l: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --lumo-box-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  
+  /* Modern border radius */
+  --lumo-border-radius-s: 6px;
+  --lumo-border-radius-m: 10px;
+  --lumo-border-radius-l: 15px;
+  --lumo-border-radius-xl: 20px;
+}
+
+/* ENTERPRISE GRADE STYLING - SUPERIOR TO ALL COMPETITORS */
+
+/* Global application styling */
+body {
+  font-family: var(--lumo-font-family);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+/* Premium header design */
+.laptop-tracker-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--lumo-box-shadow-xl);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.laptop-tracker-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Premium card system */
+.laptop-tracker-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--lumo-border-radius-l);
+  box-shadow: var(--lumo-box-shadow-l);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.laptop-tracker-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--lumo-box-shadow-xl);
+}
+
+.laptop-tracker-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #ff6b6b, #ee5a24);
+  background-size: 300% 100%;
+  animation: gradientShift 3s ease infinite;
+}
+
+/* Premium login form */
+.login-form {
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--lumo-border-radius-xl);
+  box-shadow: var(--lumo-box-shadow-xl);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.login-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: var(--lumo-border-radius-xl) var(--lumo-border-radius-xl) 0 0;
+}
+
+/* Enhanced form fields */
+.login-form vaadin-text-field,
+.login-form vaadin-email-field,
+.login-form vaadin-password-field {
+  margin-bottom: 1.5rem;
+  --lumo-border-radius-m: 12px;
+}
+
+.login-form vaadin-button[theme~="primary"] {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.login-form vaadin-button[theme~="primary"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Premium dashboard layout */
+.dashboard-container {
+  padding: 2rem;
+  background: transparent;
+}
+
+/* Modern navigation */
+vaadin-app-layout vaadin-drawer-toggle {
+  color: white;
+}
+
+vaadin-app-layout vaadin-tab {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  border-radius: var(--lumo-border-radius-m);
+  margin: 0.25rem;
+}
+
+vaadin-app-layout vaadin-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+vaadin-app-layout vaadin-tab[selected] {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Premium device cards */
+.device-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border-radius: var(--lumo-border-radius-l);
+  padding: 2rem;
+  margin: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--lumo-box-shadow-l);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.device-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.device-card:hover::before {
+  transform: translateX(100%);
+}
+
+.device-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: var(--lumo-box-shadow-xl);
+}
+
+/* Status indicators */
+.status-online {
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+  animation: pulse-green 2s infinite;
+}
+
+.status-offline {
+  background: linear-gradient(45deg, #95a5a6, #7f8c8d);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.status-alert {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+  animation: pulse-red 1.5s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3); }
+  50% { box-shadow: 0 4px 25px rgba(46, 204, 113, 0.6), 0 0 0 10px rgba(46, 204, 113, 0.1); }
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3); }
+  50% { box-shadow: 0 4px 25px rgba(231, 76, 60, 0.6), 0 0 0 10px rgba(231, 76, 60, 0.1); }
+}
+
+/* Premium buttons */
+vaadin-button[theme~="primary"] {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+vaadin-button[theme~="primary"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+vaadin-button[theme~="primary"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+vaadin-button[theme~="primary"]:hover::before {
+  left: 100%;
+}
+
+/* Success button variant */
+vaadin-button[theme~="success"] {
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  border: none;
+  font-weight: 600;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+  transition: all 0.3s ease;
+}
+
+vaadin-button[theme~="success"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+}
+
+/* Error button variant */
+vaadin-button[theme~="error"] {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  border: none;
+  font-weight: 600;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+  transition: all 0.3s ease;
+}
+
+vaadin-button[theme~="error"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+/* Premium grid layouts */
+vaadin-grid {
+  border-radius: var(--lumo-border-radius-l);
+  overflow: hidden;
+  box-shadow: var(--lumo-box-shadow-l);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+}
+
+vaadin-grid vaadin-grid-cell-content {
+  padding: 1rem;
+}
+
+/* Modern notifications */
+vaadin-notification-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: var(--lumo-border-radius-l);
+  box-shadow: var(--lumo-box-shadow-xl);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-form {
+    margin: 1rem;
+    padding: 2rem;
+  }
+  
+  .dashboard-container {
+    padding: 1rem;
+  }
+  
+  .device-card {
+    margin: 0.5rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Loading states */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+  border-radius: var(--lumo-border-radius-m);
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Accessibility enhancements */
+:focus {
+  outline: 2px solid var(--lumo-primary-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .laptop-tracker-card {
+    border: 2px solid var(--lumo-contrast-90pct);
+  }
+}
